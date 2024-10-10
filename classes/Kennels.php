@@ -16,4 +16,14 @@ class Kennels extends Product
         $this->material = $_material;
         $this->color = $_color;
     }
+
+    public function getMaterial()
+    {
+        return $this->material;
+    }
+
+    public function getColor()
+    {
+        return $this->color;
+    }
 }

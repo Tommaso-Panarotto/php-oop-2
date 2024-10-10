@@ -18,11 +18,65 @@ require __DIR__ . "/db.php";
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
         rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 
+    <!--Styel-->
+    <link rel="stylesheet" href="css/style.css">
+
 </head>
 </head>
 
 <body>
-    <h2><?= $kong->getUse() ?></h2>
+    <!--Header-->
+    <header>
+        <nav class="navbar container">
+            <!--Gender-->
+            <div class="navbar-link">
+                <ul>
+                    <li><a href="#">Cane</a></li>
+                    <li><a href="#">Gatto</a></li>
+                </ul>
+            </div>
+            <!--Logo and actions-->
+            <div class="navbar-actions">
+                <a href="#"><img src="img/boolean-logo.png" alt="boolean logo" class="logo"></a>
+                <div><a href="#"><i class="fa-solid fa-user"></i></a><a href="#"><i
+                            class="fa-regular fa-heart"></i></a><a href="#"><i class="fa-solid fa-bag-shopping"></i></a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!--Main-->
+    <main>
+        <div class="container">
+            <div class="row">
+                <?php foreach ($products as $key => $singleProduct) { ?>
+                    <div class="col">
+                        <div class="card">
+                            <div class="card-image"><img src="..." alt="$key" class="photo-shop-base">
+                                <span class="tag cl-black heart">&#9829;</span>
+                            </div>
+                            <div class="cl-black">
+                                <?= $singleProduct->getType(); ?>
+                                <h4><?= $singleProduct->getName();  ?></h4>
+                                <?php if ($singleProduct->getType() == "Toy") { ?>
+                                    <div class="material"><?= "materiale: ", $singleProduct->getMaterial(); ?></div>
+                                    <div class="use"><?= "ottimo per ", $singleProduct->getUse(); ?></div>
+                                <?php } elseif ($singleProduct->getType() == "Kennel") { ?>
+                                    <div class="material"><?= "materiale: ", $singleProduct->getMaterial(); ?></div>
+                                    <div class="color"><?= "colore: ", $singleProduct->getColor(); ?></div>
+                                <?php } else { ?>
+                                    <div class="expiration"><?= "best before: ", $singleProduct->getExpiration(); ?></div>
+                                    <div class="color"><?= "consistenza ", $singleProduct->getConsistence(); ?></div>
+                                <?php } ?>
+                                <span class="cl-red"><?= $singleProduct->getPrice(); ?></span>
+                            </div>
+                        </div>
+                    </div>
+                <?php } ?>
+            </div>
+        </div>
+    </main>
+
 </body>
 
 </html>

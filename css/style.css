@@ -1,0 +1,50 @@
+/*Generics*/
+body {
+    padding-top: 120px;
+}
+
+header {
+    background-color: green;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    font-size: 18px;
+    z-index: 1;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+ul {
+    list-style-type: none;
+}
+
+/*Header*/
+.navbar {
+    min-height: 70px;
+    display: flex;
+    align-items: center;
+}
+
+.navbar>* {
+    padding: 10px 0;
+    width: 50%;
+}
+
+.navbar-link ul {
+    display: flex;
+    gap: 10px;
+}
+
+.navbar-actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    height: 30px;
+}
