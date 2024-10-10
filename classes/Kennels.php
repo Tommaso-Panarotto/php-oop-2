@@ -1,7 +1,7 @@
 <?php
 require_once __DIR__ . "/Product.php";
 
-class FKennels extends Product
+class Kennels extends Product
 {
 
     //instance variables
