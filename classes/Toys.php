@@ -9,10 +9,10 @@ class Toys extends Product
     public $use; //playing or teaching
 
     //constructor
-    public function __construct(string $_name, int $_price, string $_imageUrl, string $_material, string $_use)
+    public function __construct(string $_category, string $_name, int $_price, string $_imageUrl, string $_material, string $_use)
     {
         //call constructor of the parent
-        parent::__construct("Toy", $_name, $_price, $_imageUrl);
+        parent::__construct("Toy", $_category, $_name, $_price, $_imageUrl);
         $this->material = $_material;
         $this->use = $_use;
     }
