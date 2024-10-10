@@ -52,7 +52,7 @@ require __DIR__ . "/db.php";
                 <?php foreach ($products as $key => $singleProduct) { ?>
                     <div class="col">
                         <div class="card">
-                            <div class="card-image"><img src="..." alt="$key" class="photo-shop-base">
+                            <div class="card-image"><img src="<?= $singleProduct->getImageUrl()  ?>" alt="$key" class="img-fluid">
                                 <span class="tag cl-black heart">&#9829;</span>
                             </div>
                             <div class="cl-black">

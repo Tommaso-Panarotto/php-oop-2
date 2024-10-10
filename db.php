@@ -15,7 +15,3 @@ $carrier = new Kennels($dog, "trixie", 70, "https://m.media-amazon.com/images/I/
 $products["Kennels"] = $carrier;
 $croquettes = new Foods($cat, "purina", 20, "https://media.zooplus.com/bilder/4/800/1_1_mhi_9_4.jpg", "solid", "28/08/2028");
 $products["Foods"] = $croquettes;
-
-
-
-var_dump($products);
