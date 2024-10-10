@@ -7,14 +7,14 @@ class Product
     public $type;
     public $name;
     public $price;
-    public $image;
+    public $imageUrl;
 
     //constructor
-    public function __construct(string $_type, string $_name, int $_price, string $_image)
+    public function __construct(string $_type, string $_name, int $_price, string $_imageUrl)
     {
         $this->type = $_type;
-        $this->type = $_name;
-        $this->type = $_price;
-        $this->type = $_image;
+        $this->name = $_name;
+        $this->price = $_price;
+        $this->imageUrl = $_imageUrl;
     }
 }
