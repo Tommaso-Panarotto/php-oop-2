@@ -11,4 +11,9 @@ class Category
     {
         $this->category = $_category;
     }
+
+    public function getCategory()
+    {
+        return $this->category;
+    }
 }

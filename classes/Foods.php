@@ -9,11 +9,21 @@ class Foods extends Product
     public $expiration; //expiration date
 
     //constructor
-    public function __construct(string $_category, string $_name, int $_price, string $_imageUrl, string $_consistence, string $_expiration)
+    public function __construct($_category, string $_name, int $_price, string $_imageUrl, string $_consistence, string $_expiration)
     {
         //call constructor of the parent
         parent::__construct("Food", $_category, $_name, $_price, $_imageUrl);
         $this->consistence = $_consistence;
         $this->expiration = $_expiration;
+    }
+
+    public function getExpiration()
+    {
+        return $this->expiration;
+    }
+
+    public function getConsistence()
+    {
+        return $this->consistence;
     }
 }

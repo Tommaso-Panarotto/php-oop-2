@@ -1,3 +1,11 @@
+<?php
+require __DIR__ . "/classes/Category.php";
+require __DIR__ . "/classes/Foods.php";
+require __DIR__ . "/classes/Kennels.php";
+require __DIR__ . "/classes/Toys.php";
+require __DIR__ . "/db.php";
+?>
+
 <!DOCTYPE html>
 <html lang="it">
 
@@ -14,7 +22,7 @@
 </head>
 
 <body>
-    <h1>BoolAnimalShop</h1>
+    <h2><?= $kong->getUse() ?></h2>
 </body>
 
 </html>

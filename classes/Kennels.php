@@ -9,7 +9,7 @@ class Kennels extends Product
     public $color;
 
     //constructor
-    public function __construct(string $_category, string $_name, int $_price, string $_imageUrl, string $_material, string $_color)
+    public function __construct(object $_category, string $_name, int $_price, string $_imageUrl, string $_material, string $_color)
     {
         //call constructor of the parent
         parent::__construct("Kennel", $_category, $_name, $_price, $_imageUrl);
