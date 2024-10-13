@@ -10,7 +10,7 @@ $cat = new Category("cat");
 
 $products = [];
 
-$kong = new Toys($dog, "kong", 20, "https://m.media-amazon.com/images/I/61VAFKv2bJL.jpg", "plastic", "teaching");
+$kong = new Toys($dog, "kong", 10, "https://m.media-amazon.com/images/I/61VAFKv2bJL.jpg", "plastic", "teaching");
 $kong->purchase = "no";
 $products["Toys"] = $kong;
 $carrier = new Kennels($dog, "trixie", 70, "https://m.media-amazon.com/images/I/81JjkSuwZEL._AC_UF350,350_QL80_.jpg", "steel", "grey");

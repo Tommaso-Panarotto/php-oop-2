@@ -27,7 +27,11 @@ class Product
 
     public function getType()
     {
-        return $this->type;
+        if ($this->price > 0) {
+            return $this->type;
+        } else {
+            throw new InvalidArgumentException("Price cannot be less than 0");
+        }
     }
 
     public function getName()
