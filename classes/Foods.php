@@ -1,12 +1,13 @@
 <?php
 require_once __DIR__ . "/Product.php";
-
+require_once __DIR__ . "/../traits/Available.php";
 class Foods extends Product
 {
 
     //instance variables
     public $consistence; //solid or liquid
     public $expiration; //expiration date
+    use Available;
 
     //constructor
     public function __construct($_category, string $_name, int $_price, string $_imageUrl, string $_consistence, string $_expiration)

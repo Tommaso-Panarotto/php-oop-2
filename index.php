@@ -4,6 +4,8 @@ require __DIR__ . "/classes/Foods.php";
 require __DIR__ . "/classes/Kennels.php";
 require __DIR__ . "/classes/Toys.php";
 require __DIR__ . "/db.php";
+require_once __DIR__ . "/traits/Available.php";
+
 ?>
 
 <!DOCTYPE html>
@@ -72,7 +74,9 @@ require __DIR__ . "/db.php";
                                     <div class="expiration"><?= "best before: ", $singleProduct->getExpiration(); ?></div>
                                     <div class="color"><?= "consistenza ", $singleProduct->getConsistence(); ?></div>
                                 <?php } ?>
-                                <span class="cl-red"><?= $singleProduct->getPrice(); ?></span>
+                                <?php if ($singleProduct->IsAvailable() == "buy") { ?> <i class="text-success fa-solid fa-cart-plus"></i> <?php } else { ?>
+                                    <i class="text-danger fa-solid fa-cart-shopping"></i> <?php } ?>
+                                <span class="text-danger"><?= $singleProduct->getPrice(); ?></span>
                             </div>
                         </div>
                     </div>

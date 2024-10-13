@@ -1,12 +1,13 @@
 <?php
 require_once __DIR__ . "/Product.php";
-
+require_once __DIR__ . "/../traits/Available.php";
 class Kennels extends Product
 {
 
     //instance variables
     public $material;
     public $color;
+    use Available;
 
     //constructor
     public function __construct(object $_category, string $_name, int $_price, string $_imageUrl, string $_material, string $_color)
