@@ -22,16 +22,16 @@ class Product
 
     public function getPrice()
     {
-        return "prezzo: $this->price $";
+        if ($this->price > 0) {
+            return "prezzo: $this->price $";
+        } else {
+            throw new InvalidArgumentException("Price cannot be less than 0");
+        }
     }
 
     public function getType()
     {
-        if ($this->price > 0) {
-            return $this->type;
-        } else {
-            throw new InvalidArgumentException("Price cannot be less than 0");
-        }
+        return $this->type;
     }
 
     public function getName()

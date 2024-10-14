@@ -76,7 +76,14 @@ require_once __DIR__ . "/traits/Available.php";
                                 <?php } ?>
                                 <?php if ($singleProduct->IsAvailable() == "buy") { ?> <i class="text-success fa-solid fa-cart-plus"></i> <?php } else { ?>
                                     <i class="text-danger fa-solid fa-cart-shopping"></i> <?php } ?>
-                                <span class="text-danger"><?= $singleProduct->getPrice(); ?></span>
+                                <span class="text-danger">
+                                    <?php
+                                    try {
+                                        echo $singleProduct->getPrice();
+                                    } catch (Exception $e) {
+                                        echo $e->getMessage();
+                                    }; ?>
+                                </span>
                             </div>
                         </div>
                     </div>
